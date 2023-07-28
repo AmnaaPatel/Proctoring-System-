@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .feature {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature h2 {
+            font-size: 20px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .navbar {
+            background-color: #f1f1f1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            /* padding-left: 120px; */
+            padding-bottom: 10px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .mainBody {
+            background-color: #ddd;
+        }
+
+        .featureBox {
+            padding-top: 5em;
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .navbar .logo {
+            float: left;
+            padding: 14px 16px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Proctoring System</title>
+</head>
+
+<body>
+
+    <!-- <div class="feature"> -->
+    <div class="mainBody">
+        <div class="navbar">
+            <div class="logo">Proctox</div>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a class="active" href="{{ url_for('features') }}">Features</a>
+            <a href="{{ url_for('pricing') }}">Pricing</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+        </div>
+        <div class="featureBox">
+            <div class="feature">
+                <h2>Real-time Monitoring</h2>
+                <p>Monitor exam sessions in real-time to ensure integrity and prevent cheating.</p>
+            </div>
+            <div class="feature">
+                <h2>Identity Verification</h2>
+                <p>Verify the identity of exam takers using secure authentication methods.</p>
+            </div>
+            <div class="feature">
+                <h2>AI-based Proctoring</h2>
+                <p>Utilize advanced artificial intelligence algorithms to detect suspicious behavior and cheating
+                    attempts.
+                </p>
+            </div>
+            <div class="feature">
+                <h2>Secure Exam Environment</h2>
+                <p>Create a secure environment by disabling external applications, screen sharing, and virtual machines.
+                </p>
+            </div>
+            <div class="feature">
+                <h2>Detecting Gadgets</h2>
+                <p>Detecting gadgets: Leveraging advanced algorithms to identify and prevent the use of unauthorized
+                    devices during exams
+                </p>
+            </div>
+            <div class="feature">
+                <h2>Face Spoofing</h2>
+                <p>Detect fraudulent attempts of using fake or manipulated facial images during identity verificatio
+                </p>
+            </div>
+            <div class="feature">
+                <h2>Head Pose Estimation</h2>
+                <p> head pose estimation for robust tracking and analysis of facial movements and orientations in
+                    real-time applications.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- </div> -->
+</body>
+
+</html>

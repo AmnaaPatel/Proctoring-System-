@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            padding-top: 0px;
+            text-align: center;
+        }
+
+        .navbar {
+            margin-top: 0px;
+            padding-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .navbar {
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navbar .logo {
+            float: left;
+            padding: 14px 16px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            background-color: #f1f1f1;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            max-width: 300px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .mainBody {
+            margin: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="navbar">
+                <div class="logo">Proctox</div>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('features') }}">Features</a>
+                <a href="{{ url_for('pricing') }}">Pricing</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a class="active" href="{{ url_for('about') }}">About Us</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="mainBody">
+        <div class="head">
+            <h2> Group Members</h2>
+        </div>
+        <div class="about-container">
+            <div class="card">
+                <h2 class="card-title">Amna Patel</h2>
+                <p>Roll No: 22</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Dhruvraj Solanki</h2>
+                <p>Roll No: 38</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Himesh Ganwani</h2>
+                <p>Roll No: 42</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Manav Anandani</h2>
+                <p>Roll No: 49</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            padding-right: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+        }
+
+        .contact-form button {
+            display: block;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        .navbar {
+            background-color: #f1f1f1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            /* padding-left: 120px; */
+            padding-bottom: 10px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .navbar .logo {
+            float: left;
+            padding: 14px 16px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <title>Proctoring System</title>
+</head>
+
+<body>
+    <div class="mainBody">
+        <div class="navbar">
+            <div class="logo">Proctox</div>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('features') }}">Features</a>
+            <a href="{{ url_for('pricing') }}">Pricing</a>
+            <a class="active" href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+        </div>
+        <div class="contact">
+            <form class="contact-form">
+                <h2>Contact Us</h2>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
